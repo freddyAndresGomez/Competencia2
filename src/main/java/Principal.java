@@ -19,7 +19,7 @@ public class Principal {
      */
     
        
-       static List<Atleta> atletas = new ArrayList<>();
+      public static List<Atleta> atletas = new ArrayList<>();
 
     public static void main(String[] args) {
         while (true) {
@@ -54,7 +54,7 @@ public class Principal {
         }
     }
 
-    static void registrarAtleta() {
+    public static void registrarAtleta() {
         String nombre = JOptionPane.showInputDialog("Nombre del atleta:");
         String nacionalidad = JOptionPane.showInputDialog("Nacionalidad del atleta:");
         double tiempoLlegada = Double.parseDouble(JOptionPane.showInputDialog("Tiempo de llegada del atleta:"));
@@ -62,7 +62,7 @@ public class Principal {
         atletas.add(new Atleta(nombre, nacionalidad, tiempoLlegada));
     }
 
-    static void datosCampeon() {
+   public static void datosCampeon() {
         if (atletas.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No hay atletas registrados.");
             return;
@@ -83,7 +83,7 @@ public class Principal {
         );
     }
 
-    static void buscarPorNacionalidad() {
+    public static void buscarPorNacionalidad() {
         String nacionalidadBuscar = JOptionPane.showInputDialog("Ingrese la nacionalidad a buscar:");
         StringBuilder atletasNacionalidad = new StringBuilder("Atletas de la nacionalidad " + nacionalidadBuscar + ":\n");
 
@@ -102,7 +102,7 @@ public class Principal {
         }
     }
 
-    static void promedioTiempos() {
+   public static void promedioTiempos() {
         if (atletas.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No hay atletas registrados.");
             return;
